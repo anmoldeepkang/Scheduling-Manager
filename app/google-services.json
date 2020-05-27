@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "63231374069",
+    "firebase_url": "https://learning-338de.firebaseio.com",
+    "project_id": "learning-338de",
+    "storage_bucket": "learning-338de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63231374069:android:061a62a9832b244a488bbc",
+        "android_client_info": {
+          "package_name": "com.example.learning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63231374069-u8j6gvov7a314kf68obh6iptoll8g76c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdjGYwd8F8OqECruDuAkSr5xgfiH_OJqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63231374069-u8j6gvov7a314kf68obh6iptoll8g76c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

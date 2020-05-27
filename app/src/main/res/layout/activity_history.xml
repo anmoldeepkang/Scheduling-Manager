@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".History"
+    style="@style/loginParent">
+    <RelativeLayout
+        style="@style/parent"
+        android:id="@+id/headerLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:weightSum="12"
+            >
+            <LinearLayout
+                style="@style/parent"
+                android:background="@drawable/login_shape_bk"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <ImageView
+                    style="@style/parent"
+                    android:background="@drawable/ic_login_bk"
+                    android:contentDescription="login background" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp">
+
+
+            <TextView
+                style="@style/headerText"
+                android:layout_gravity="center"
+                android:text="History"
+                android:layout_marginTop="40dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/startDatehistory"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:hint="From date"
+                    android:layout_below="@id/headerLayout"
+                    android:textColorHint="@color/whiteTextColor"
+                    android:textColor="@color/whiteTextColor"
+                    />
+                <EditText
+                    android:id="@+id/endDatehistory"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/startDatehistory"
+                    android:ems="10"
+                    android:hint="To date"
+                    android:layout_marginStart="110dp"
+                    android:inputType="date"
+                    android:textColorHint="@color/whiteTextColor"
+                    android:textColor="@color/whiteTextColor"/>
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/startDatehistory"
+                    android:id="@+id/shiftstable"
+                    android:stretchColumns="*"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center_horizontal">
+             </TableLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

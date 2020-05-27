@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/loginParent"
+    tools:context=".Profile"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/login_shape_bk"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            style="@style/headerText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome, Anmoldeep" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="0dp"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            style="@style/headerText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Designation: Manager" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="right">
+                   <ImageView
+                       android:id="@+id/logoutButton"
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+                       app:srcCompat="@drawable/log_off_button" />
+               </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+            <!--<ImageView
+                 android:id="@+id/imageView"
+                 android:layout_width="120dp"
+                 android:layout_height="120dp"
+                 android:layout_centerInParent="true"
+                 android:layout_centerHorizontal="true"
+                 android:contentDescription="TODO"
+                 android:scaleType="fitXY"
+                 tools:srcCompat="@tools:sample/avatars" />-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp">
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/loginCard"
+                app:cardCornerRadius="@dimen/loginCardRadius"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:layout_marginBottom="@dimen/loginViewsMargin"
+                android:background="@color/whiteCardColor">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:padding="3dp"
+                        android:rowCount="2"
+                        android:layout_below="@+id/constraintLayout">
+
+                        <LinearLayout android:layout_height="wrap_content"
+                            android:layout_width="150dp" android:orientation="vertical"
+                           android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            >
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imageButton2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/record_hours"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="Swap Requests" />
+
+                        </LinearLayout>
+
+                       <LinearLayout android:layout_width="150dp"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_gravity="center_horizontal"
+                           android:gravity="center">
+                           <de.hdodenhof.circleimageview.CircleImageView
+                               android:id="@+id/imageButton3"
+                               android:layout_width="100dp"
+                               android:layout_height="100dp"
+                               android:src="@drawable/history"
+                               />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="0dp"
+                               android:text="History" />
+
+                       </LinearLayout>
+
+
+                    <LinearLayout android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageButton4"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/build_schedule"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="0dp"
+                            android:text="Create schedule" />
+                    </LinearLayout>
+                        <LinearLayout android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imageButton5"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/upcoming_schedule"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:text="Upcoming schedule" />
+
+                        </LinearLayout>
+                    </GridLayout>
+                </ScrollView>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="110dp"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+
+                android:foregroundGravity="center_horizontal"
+                android:src="@drawable/petro_canada" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

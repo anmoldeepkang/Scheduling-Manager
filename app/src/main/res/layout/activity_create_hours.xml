@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="false"
+    tools:context=".CreateSchedule">
+    <RelativeLayout
+        style="@style/parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:weightSum="12"
+            >
+            <LinearLayout
+                style="@style/parent"
+                android:background="@drawable/login_shape_bk"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <ImageView
+                    style="@style/parent"
+                    android:background="@drawable/ic_login_bk"
+                    android:contentDescription="login background" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp">
+
+
+            <TextView
+                style="@style/headerText"
+                android:layout_gravity="center"
+                android:text="Create Schedule"
+                android:layout_marginTop="40dp"/>
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                app:mcv_allowClickDaysOutsideCurrentMonth="true"
+                app:mcv_calendarMode="week"
+                app:mcv_selectionColor="#00a5ff"
+                app:mcv_showOtherDates="out_of_range" />
+            <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/calendarView">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/shiftsTable"
+                            >
+                        </TableLayout>
+                        <Button
+                            android:id="@+id/saveSchedule"
+                            style="@style/loginButton"
+                            android:visibility="invisible"
+                            android:text="Save"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/loginViewsMargin"/>
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        />
+
+
+</RelativeLayout>

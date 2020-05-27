@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="false"
+    tools:context=".UpcomingSchedule">
+    <RelativeLayout
+        style="@style/parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:weightSum="12"
+            >
+            <LinearLayout
+                style="@style/parent"
+                android:background="@drawable/login_shape_bk"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <ImageView
+                    style="@style/parent"
+                    android:background="@drawable/ic_login_bk"
+                    android:contentDescription="login background" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp">
+
+
+            <TextView
+                style="@style/headerText"
+                android:layout_gravity="center"
+                android:text="Upcoming Schedule"
+                android:layout_marginTop="40dp"/>
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                app:mcv_allowClickDaysOutsideCurrentMonth="true"
+                app:mcv_calendarMode="week"
+                app:mcv_selectionColor="#00a5ff"
+                app:mcv_showOtherDates="out_of_range" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calendarView">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/containerLayout">
+                    <TableLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shiftsTable"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:stretchColumns="*"
+                        android:layout_marginTop="30dp"
+                        >
+                    <TableRow>
+                        <TextView
+                            android:text="Start Time"
+                            android:textAlignment="center"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:text=""
+                            android:textAlignment="center"
+                            android:id="@+id/startTime"
+                            android:textSize="20dp"/>
+                    </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:text="End Time"
+                                android:textSize="20dp"
+                                android:textAlignment="center"/>
+                            <TextView
+                                android:text=""
+                                android:textAlignment="center"
+                                android:id="@+id/endTime"
+                                android:textSize="20dp"/>
+                        </TableRow>
+                    </TableLayout>
+                    <TextView
+                        android:text="You have already initiated swap request for this shift"
+                        android:textSize="20dp"
+                        android:id="@+id/alreadyInitiatedText"
+                        android:layout_marginTop="40dp"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAlignment="center"/>
+
+                    <Button android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:text="Swap shift"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/swapShiftButton"/>
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
